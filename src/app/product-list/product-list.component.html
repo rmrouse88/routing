@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <button class = 'btn btn-primary' (click) = "toggleItems()"> Show Product Images </button>
+      <h3>shit goes here</h3>
+    </div>
+  </div>
+  <table class = "table table-striped">
+    <thead>
+      <tr>
+        <th *ngIf = "showItems">Item Image</th>
+        <th>Product Name</th>
+        <th>Product Code</th>
+        <th>Release Date</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Star Rating</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let product of products">
+        <td *ngIf = "showItems">
+          <img src = "{{ product.imageUrl }}">
+        </td>
+        <a href ="" [routerLink] = "['/products', product.productId]"><td> {{ product.productName }}</td></a>
+        <td> {{ product.productCode }} </td>
+        <td> {{ product.releaseDate }} </td>
+        <td> {{ product.description }} </td>
+        <td> {{ product.price }} </td>
+        <td> {{ product.starRating }} </td>
+        <td> 
+          <a class = "btn btn-primary" href = "" 
+            [routerLink] = "['/products', product.productId, 'edit']">
+              EDIT
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

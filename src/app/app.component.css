@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: orangered;
+
+}
+
+.logo {
+    height: 100px;
+    background: aqua;
+}
+
+.nav-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link-container a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link-container a:hover {
+    cursor: pointer;
+}
