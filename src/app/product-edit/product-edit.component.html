@@ -1,3 +1,57 @@
-<p>
-  product-edit works!
-</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header"><h2>Product Edit</h2></div>
+    <div class="card-body">
+      <h1 class="card-title"></h1>
+      <p class="card-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque voluptate magni, accusamus est ratione molestias quidem laboriosam nulla laborum ipsam maiores velit possimus sapiente perferendis labore in corporis accusantium!
+      </p>
+      
+      <form [formGroup] = "productEditForm">
+        <div class = "form-group">
+            <label for="control"> ProductID </label>
+            <input type="text" class='form-control' id = "control" formControlName='productID'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Product Name </label>
+            <input type="text" class='form-control' id = "control" formControlName='productName'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Product Code </label>
+            <input type="text" class='form-control' id = "control" formControlName='productCode'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Release Date </label>
+            <input type="text" class='form-control' id = "control" formControlName='releaseDate'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Description </label>
+            <input type="text" class='form-control' id = "control" formControlName='description'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Price </label>
+            <input type="text" class='form-control' id = "control" formControlName='price'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Star Rating </label>
+            <input type="text" class='form-control' id = "control" formControlName='starRating'>            
+        </div>
+        <div class = "form-group">
+            <label for="control"> Image URL  </label>
+            <input type="text" class='form-control' id = "control" formControlName='imageUrl'>            
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-s-2">
+            <button class = 'btn btn-primary' (click) = "submit()">SUBMIT</button>
+        </div>
+        <div class="col-s-2">
+            <button class = 'btn btn-inactive' (click) = "toListView()">BACK</button>
+        </div>
+      </div>      
+      
+    </div>
+  </div>
+</div>
+<br> {{ productEditForm.valid }}
+
